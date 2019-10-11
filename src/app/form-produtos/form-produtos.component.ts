@@ -7,18 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormProdutosComponent implements OnInit {
   titulo = 'Formulário de Produtos';
-  produto = "Produto 2";
+  produto = {id:'',nome:'',preco:''};
+  produtos= [];
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  
+  salvarProduto(){
+    this.produtos.push(this.produto);
+    this.produto = {id:'',nome:'',preco:''};
+
+  }
+
 
 
   // capturaInput(evento){
   //   this.produto = evento.target.value;    
   // }
-
 }
