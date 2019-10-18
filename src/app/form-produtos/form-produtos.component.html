@@ -7,18 +7,3 @@
 <label>Preço:</label><br/>
 <input type="text" [(ngModel)]="produto.preco"><br/>
 <button (click)="salvarProduto()">Salvar</button>
-
-<br/><br/>
-<ul>
-    <li *ngFor="let prod of produtos">{{prod.nome}}</li>
-</ul>
-
-<br/><br/><br/>
-{{produto.id}}<br/>
-{{produto.nome}}<br/>
-{{produto.preco}}
-
-<!-- <input [(ngModel)]="produto">
-<br />
-<input [value]="produto" (keyup)="capturaInput($event)">
-{{produto}} -->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Produto } from '../produto';
 
 @Component({
   selector: 'app-tabela-produtos',
@@ -8,14 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TabelaProdutosComponent implements OnInit {
   titulo = "Tabela de Produtos";
 
-  produtos = [
-    {id:1,nome:"Produto 1",preco:100.00},
-    {id:2,nome:"Produto 2",preco:200.00},
-    {id:3,nome:"Produto 3",preco:300.00},
-    {id:4,nome:"Produto 4",preco:400.00},
-    {id:5,nome:"Produto 5",preco:500.00},
-    {id:6,nome:"Produto 6",preco:600.00},
-  ]
+  @Input() produtos: Produto[] = [];
 
 
   constructor() { }
